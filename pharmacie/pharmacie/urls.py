@@ -21,8 +21,11 @@ from internaute import views as internaute_views
 from client import views as client_views
 from pharmacien import views as pharmacien_views
 from pharmacie import views as core_views
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
+    path('login/', LoginView.as_view(template_name='authentification.html'), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
     path("internaute/checkpoint/", internaute_views.checkpoint),
     path("internaute/result/", internaute_views.rechercherMedicament),
     path("internaute/receipt/", internaute_views.generate_receipt),

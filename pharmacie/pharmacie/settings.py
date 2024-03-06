@@ -22,6 +22,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-(f0%__9__hkv3e8_$iuk3!dxm=z7@k^15zyy6l7wgru413lrxs"
 
+# Add Django's authentication backend
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+# Specify the login URL
+LOGIN_URL = '/login/'
+
+# Login template
+LOGIN_TEMPLATE = BASE_DIR / "pharmacie" / "core" / "templates" / "authentification.html"
+
+# Specify the URL to redirect to after successful login
+LOGIN_REDIRECT_URL = '/pharmacien/'
+
+# Specify the URL to redirect to after successful logout
+LOGOUT_REDIRECT_URL = '/'
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
