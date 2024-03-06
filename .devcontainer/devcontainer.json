@@ -7,12 +7,12 @@
   "updateContentCommand": "pip install -r requirements.txt && python manage.py migrate",
   "postCreateCommand": "cp .env.example .env",
   "postAttachCommand": {
-    "server": "python manage.py runserver"
+    "server": "python pharmacie/manage.py runserver"
   },
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "hello_world/templates/index.html"
+        "pharmacie/pharmacie/core/templates/index.html"
       ]
     },
     "vscode": {
