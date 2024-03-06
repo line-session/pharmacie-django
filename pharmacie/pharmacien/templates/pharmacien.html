@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static '/test/P.ico' %}" type="image/x-icon">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/">Retour</a>
+        <h1>Pharmacy Management System</h1>
+        <ul>
+            <li><a href="/pharmacien/tmpsell">[1] Vendre un médicament</a></li>
+            <li><a href="/pharmacien/tmpMed">[2] Visualiser les détails d'un médicament</a></li>
+            <li><a href="/pharmacien/tmpPhar">[3] Visualiser les details d'un pharmacien</a></li>
+            <li><a href="/pharmacien/medecines">[4] Visualiser tous les médicaments</a></li>
+            <li><a href="/pharmacien/pharmaciens">[5] Visualiser tous les pharmaciens</a></li>
+            <li><a href="/pharmacien/tmpaddmed">[6] Ajouter un médicament</a></li>
+            <li><a href="/pharmacien/tmpaddphar">[7] Ajouter un pharmacien</a></li>
+            <li><a href="/pharmacien/tmpstock">[8] Modifier le stock d'un médicament</a></li>
+            <li><a href="/pharmacien/tmpdelmed">[9] Supprimer un médicament</a></li>
+            <li><a href="/pharmacien/tmpdelphar">[10] Supprimer un pharmacien</a></li>
+        </ul>
+    </div>
+</body>
+</html>
