@@ -1,24 +1,17 @@
 from django.shortcuts import render, redirect
 from SharedDB.models import medicament, pharmacien
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.decorators import login_required
-
 
 @csrf_exempt
-@login_required
-def login(request):
+def index(request):
     if request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
 
         if((username == "root") and (password == "admin")):
-            return redirect("/pharmacien/")
+            return redirect("/pharmacien")
         else:
             return redirect("/fail")
-    return redirect("/")
-
-@csrf_exempt
-def index(request):
     return render(request, "pharmacien.html")
 
 @csrf_exempt

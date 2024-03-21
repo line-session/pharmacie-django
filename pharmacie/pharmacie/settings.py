@@ -27,25 +27,12 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-# Specify the login URL
-LOGIN_URL = '/login/'
-
-# Login template
-LOGIN_TEMPLATE = BASE_DIR / "pharmacie" / "core" / "templates" / "authentification.html"
-
-# Specify the URL to redirect to after successful login
-LOGIN_REDIRECT_URL = '/pharmacien/'
-
-# Specify the URL to redirect to after successful logout
-LOGOUT_REDIRECT_URL = '/'
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
 ]
-
 
 # Application definition
 
